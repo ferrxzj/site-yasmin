@@ -1,83 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para o amor da minha vida</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #fceff9, #ffe6eb);
-      color: #3e3e3e;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+      color: #3e3e3e;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
     h1 {
-      color: #d63384;
       font-size: 3em;
+      color: #d63384;
       margin-bottom: 10px;
     }
+
     .heart {
-      font-size: 2em;
+      font-size: 2.5em;
       animation: pulse 1.5s infinite;
+      color: #ff4d6d;
+      margin-bottom: 30px;
     }
+
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
+
     .card {
-      max-width: 700px;
       background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
       padding: 30px;
-      text-align: center;
-      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      line-height: 1.7;
     }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    .final-msg {
+
+    .card p {
       font-size: 1.2em;
-      margin-top: 30px;
-      background-color: #ffe6eb;
+    }
+
+    .romantic-img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .final-msg {
+      background-color: #ffe0eb;
       padding: 15px;
       border-radius: 10px;
-      color: #d63384;
+      font-size: 1.2em;
+      color: #c9184a;
+      margin-top: 20px;
     }
+
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: #888;
+      text-align: center;
+    }
+
+    /* Corações flutuantes */
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .heart-float {
+      position: absolute;
+      animation: float 10s linear infinite;
+      font-size: 24px;
+      opacity: 0.6;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Para o amor da minha vida 💖</h1>
-  <div class="heart">❤️</div>
 
-  <div class="card">
-    <p>
-      Meu amor,<br><br>
-      Este site é uma pequena surpresa para lembrar o quanto você é especial para mim.
-      Não há palavras suficientes para descrever o que sinto por você, mas tentei deixar um pedacinho do meu coração aqui.
-    </p>
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
 
-    <img src="https://images.unsplash.com/photo-1527153907022-465ee4752c25?auto=format&fit=crop&w=800&q=80" alt="Imagem romântica">
+  <!-- Corações flutuantes -->
+  <div class="floating-hearts">
+    <div class="heart-float" style="left: 10%;">💖</div>
+    <div class="heart-float" style="left: 30%; animation-delay: 2s;">💗</div>
+    <div class="heart-float" style="left: 50%; animation-delay: 4s;">❤️</div>
+    <div class="heart-float" style="left: 70%; animation-delay: 1s;">💕</div>
+    <div class="heart-float" style="left: 90%; animation-delay: 3s;">💘</div>
+  </div>
 
-    <div class="final-msg">
-      Eu te amo mais do que palavras podem dizer. Obrigado por existir na minha vida. 💘
+  <div class="container">
+    <h1>Para o amor da minha vida</h1>
+    <div class="heart">❤️</div>
+
+    <div class="card">
+      <p>
+        Meu amor,<br><br>
+        Eu queria encontrar uma forma diferente de te mostrar o quanto você é especial pra mim...<br>
+        Então criei esse pequeno site com todo carinho do mundo. ❤️<br><br>
+        Cada segundo ao seu lado é uma bênção. Seu sorriso ilumina meus dias e seu amor me dá forças. Obrigado por existir.
+      </p>
+
+      <img class="romantic-img" src="https://images.unsplash.com/photo-1527153907022-465ee4752c25?auto=format&fit=crop&w=800&q=80" alt="Imagem romântica">
+
+      <div class="final-msg">
+        Eu te amo infinitamente. Para sempre seu. 💞
+      </div>
     </div>
   </div>
 
   <footer>
-    Feito com amor por você ❤️
+    Feito com todo o meu amor para você ❤️
   </footer>
+
 </body>
 </html>
