@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para o amor da minha vida</title>
+  <!-- Fontes elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,8 +14,8 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe0f3, #ffd3e0);
       color: #3e3e3e;
       overflow-x: hidden;
     }
@@ -26,13 +28,15 @@
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       color: #d63384;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      font-family: 'Pacifico', cursive;
+      letter-spacing: 2px;
     }
 
     .heart {
-      font-size: 2.5em;
+      font-size: 3em;
       animation: pulse 1.5s infinite;
       color: #ff4d6d;
       margin-bottom: 30px;
@@ -40,26 +44,38 @@
 
     @keyframes pulse {
       0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+      50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
 
     .card {
-      background-color: #fff;
-      padding: 30px;
+      background-color: #ffffff;
+      padding: 35px;
       border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      line-height: 1.7;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      line-height: 1.8;
+      max-width: 90%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
     }
 
     .card p {
-      font-size: 1.2em;
+      font-size: 1.3em;
+      line-height: 1.6;
+      color: #5a5a5a;
     }
 
     .romantic-img {
       max-width: 100%;
       border-radius: 12px;
       margin: 25px 0;
+      transition: transform 0.5s ease;
+    }
+
+    .romantic-img:hover {
+      transform: scale(1.05);
     }
 
     .final-msg {
@@ -69,11 +85,12 @@
       font-size: 1.2em;
       color: #c9184a;
       margin-top: 20px;
+      font-weight: bold;
     }
 
     footer {
       margin-top: 40px;
-      font-size: 0.9em;
+      font-size: 1em;
       color: #888;
       text-align: center;
     }
@@ -92,8 +109,8 @@
     .heart-float {
       position: absolute;
       animation: float 10s linear infinite;
-      font-size: 24px;
-      opacity: 0.6;
+      font-size: 30px;
+      opacity: 0.7;
     }
 
     @keyframes float {
@@ -106,6 +123,46 @@
         opacity: 0;
       }
     }
+
+    /* Linha do tempo */
+    .timeline {
+      margin-top: 60px;
+      text-align: center;
+      color: #d63384;
+    }
+
+    .timeline h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      background: #ffffff;
+      padding: 20px;
+      border-left: 5px solid #d63384;
+      border-radius: 8px;
+      text-align: left;
+      position: relative;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item .date {
+      font-weight: bold;
+      color: #c9184a;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.2em;
+    }
+
   </style>
 </head>
 <body>
@@ -133,20 +190,31 @@
       <p>
         Meu amor,<br><br>
         Eu queria encontrar uma forma diferente de te mostrar o quanto você é especial pra mim...<br>
-        Então criei esse pequeno site com todo carinho do mundo. ❤️<br><br>
-        Cada segundo ao seu lado é uma bênção. Seu sorriso ilumina meus dias e seu amor me dá forças. Obrigado por existir.
+        Então tentei fazer esse pequeno site com todo carinho do mundo. ❤️<br><br>
+        Cada segundo ao seu lado é muito especial para mim. Seu sorriso me traz paz e seu amor me dá forças. Obrigado por existir.
       </p>
 
       <img class="romantic-img" src="https://images.unsplash.com/photo-1527153907022-465ee4752c25?auto=format&fit=crop&w=800&q=80" alt="Imagem romântica">
 
       <div class="final-msg">
-        Eu te amo infinitamente. Para sempre seu. 💞
+        Eu te amo muito meu amor. Para sempre nos. 💞
       </div>
     </div>
+
+    <!-- Linha do tempo -->
+    <section class="timeline">
+      <h2>📆 Cineminha</h2>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <span class="date">05/10/2024</span>
+          <p>O dia em que começamos a namorar — e tudo mudou para a gente. 💖</p>
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer>
-    Feito com todo o meu amor para você ❤️
+    foi rapidinho mas foi de coracao amor, EU TE AMOO ❤️
   </footer>
 
 </body>
